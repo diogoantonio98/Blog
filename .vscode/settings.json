@@ -1,0 +1,7 @@
+{
+    "workbench.editor.labelFormat": "short",
+    "explorer.compactFolders": false,
+    "editor.minimap.enabled": false,
+    "javascript.suggest.autoImports": true,
+    "typescript.suggest.autoImports": true,
+}
