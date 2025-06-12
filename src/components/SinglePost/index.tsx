@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { PostHeading } from '../PostHeading';
 import { PostDate } from '../PostDate';
 import { SafeMarkdown } from '../SafeMarkdown';
+import { logColor } from '@/utils/log-color';
 
 type SinglePostProps = {
     slug: string;
@@ -10,6 +11,7 @@ type SinglePostProps = {
 
 export async function SinglePost({ slug }: SinglePostProps) {
     const post = await findPublicPostBySlugCached(slug);
+
 
     return (
         <article className='mb-16'>
