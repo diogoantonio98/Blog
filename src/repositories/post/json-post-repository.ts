@@ -2,6 +2,7 @@ import { PostModel } from '@/models/post/post-model';
 import { PostRepository } from './post-repository';
 import { resolve } from 'path';
 import { readFile, writeFile } from 'fs/promises';
+import { SIMULATE_WAIT_IN_MS } from '@/lib/constants';
 
 //const simulateWaitMs = Number(process.env.SIMULATE_WAIT_IN_MS) || 0;
 
@@ -14,13 +15,13 @@ const JSON_POSTS_FILE_PATH = resolve(
     'posts.json',
 );
 
-const simulateWaitMs = 0;
+
 
 export class JsonPostRepository implements PostRepository {
     private async simulateWait() {
-        if (simulateWaitMs <= 0) return;
+        if (SIMULATE_WAIT_IN_MS <= 0) return;
 
-        await new Promise(resolve => setTimeout(resolve, simulateWaitMs));
+        await new Promise(resolve => setTimeout(resolve, SIMULATE_WAIT_IN_MS));
     }
 
     private async readFromDisk(): Promise<PostModel[]> {
