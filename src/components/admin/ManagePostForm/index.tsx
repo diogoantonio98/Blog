@@ -87,6 +87,7 @@ export function ManagePostForm(props: ManagePostFormProps) {
                     name='id'
                     placeholder='ID gerado automaticamente'
                     type='text'
+                    defaultValue={formState.id}
                     disabled={isPending}
                     readOnly
                 />
@@ -96,6 +97,7 @@ export function ManagePostForm(props: ManagePostFormProps) {
                     name='slug'
                     placeholder='Slug gerada automaticamente'
                     type='text'
+                    defaultValue={formState.slug}
                     disabled={isPending}
                     readOnly
                 />
@@ -105,6 +107,7 @@ export function ManagePostForm(props: ManagePostFormProps) {
                     name='author'
                     placeholder='Digite o nome do autor'
                     type='text'
+                    defaultValue={formState.author}
                     disabled={isPending}
                 />
 
@@ -113,6 +116,7 @@ export function ManagePostForm(props: ManagePostFormProps) {
                     name='title'
                     placeholder='Digite o título'
                     type='text'
+                    defaultValue={formState.title}
                     disabled={isPending}
                 />
 
@@ -121,6 +125,7 @@ export function ManagePostForm(props: ManagePostFormProps) {
                     name='excerpt'
                     placeholder='Digite o resumo'
                     type='text'
+                    defaultValue={formState.excerpt}
                     disabled={isPending}
                 />
 
@@ -146,6 +151,7 @@ export function ManagePostForm(props: ManagePostFormProps) {
                     labelText='Publicar?'
                     name='published'
                     type='checkbox'
+                    defaultChecked={formState.published}
                     disabled={isPending}
                 />
 
